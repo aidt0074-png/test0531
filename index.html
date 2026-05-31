@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>광명시 실시간 날씨 정보</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="weather-container">
+        <h2>실시간 현재 날씨</h2>
+        <p class="location-info">경기도 광명시 (격자: X 58, Y 125)</p>
+        
+        <!-- 로딩 표시 -->
+        <div id="loading" class="loading">날씨 정보를 불러오는 중...</div>
+
+        <!-- 결과 화면 (처음에는 숨김) -->
+        <div id="weather-card" class="weather-card hidden">
+            <div class="updated-time">기준 시간: <span id="base-time-text">-</span></div>
+            
+            <div class="main-info">
+                <span id="temp-val" class="temperature">0</span><span class="unit">°C</span>
+            </div>
+
+            <div class="details-grid">
+                <div class="detail-item">
+                    <span class="label">강수 형태</span>
+                    <span id="pty-val" class="value">-</span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">1시간 강수량</span>
+                    <span id="rn1-val" class="value">-</span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">습도</span>
+                    <span id="reh-val" class="value">-</span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">풍향/풍속</span>
+                    <span id="wind-val" class="value">-</span>
+                </div>
+            </div>
+        </div>
+        
+        <button id="refresh-btn" class="refresh-btn">새로고침</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
